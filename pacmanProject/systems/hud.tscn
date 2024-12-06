@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvcervny45js"]
+
+[ext_resource type="Script" path="res://systems/hud.gd" id="1_j2kqs"]
+[ext_resource type="Texture2D" uid="uid://cu72hytvs5ju6" path="res://assets/tilemaps/spritesheet.png" id="2_knnwu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hldvd"]
+atlas = ExtResource("2_knnwu")
+region = Rect2(127, 85, 20, 20)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_j2kqs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Life1" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = SubResource("AtlasTexture_hldvd")
+
+[node name="Life2" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = SubResource("AtlasTexture_hldvd")
+
+[node name="Life3" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = SubResource("AtlasTexture_hldvd")
+
+[node name="Score" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
