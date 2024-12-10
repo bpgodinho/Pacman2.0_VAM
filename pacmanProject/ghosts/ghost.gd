@@ -40,7 +40,6 @@ func _process(delta: float) -> void:
 			ghost_color = "blue"
 		GhostMode.RUNNING_ENDING:
 			ghost_color = "flash"
-	
 	var animation_name := ghost_color + "_" + _get_direction_name()
 	animated_sprite_2d.play(animation_name)
 

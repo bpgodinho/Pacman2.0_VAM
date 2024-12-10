@@ -86,6 +86,7 @@ func die() -> void:
 			SaveSystem.data.highscore = GameManager.score
 			SaveSystem.save_game()
 		GameManager.restart()
+		get_tree().change_scene_to_file("res://menu.tscn")
 
 
 func _restart() -> void:

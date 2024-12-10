@@ -5,9 +5,11 @@ signal running_mode_ending
 signal running_mode_ended
 signal pacman_died
 
+var levels: Array[String] = ["res://menu.tscn","res://levels/level_1.tscn","res://levels/level_2.tscn","res://levels/level_3.tscn"]
 var score := 0
 var lives := 3
 var is_running_mode := false
+var level := -1
 
 func enter_running_mode() -> void:
 	is_running_mode = true
@@ -34,7 +36,13 @@ func eat_ghost() -> void:
 func eat_bonus(points: int) -> void:
 	score += points
 
+
+func end_game() -> void:
+	get_tree().change_scene_to_file(levels[level])
+	level = wrapi(level + 1, 0,3) 
+	pass
+
+
 func restart() -> void:
 	score = 0
 	lives = 3
-	get_tree().reload_current_scene()
