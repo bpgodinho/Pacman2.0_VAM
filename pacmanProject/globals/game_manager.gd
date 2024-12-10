@@ -9,7 +9,6 @@ var score := 0
 var lives := 3
 var is_running_mode := false
 
-
 func enter_running_mode() -> void:
 	is_running_mode = true
 	running_mode_entered.emit()
@@ -32,6 +31,8 @@ func eat_large_pellet() -> void:
 func eat_ghost() -> void:
 	score += 100
 
+func eat_bonus(points: int) -> void:
+	score += points
 
 func restart() -> void:
 	score = 0

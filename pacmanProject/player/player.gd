@@ -32,6 +32,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("right"):
 		facing_direction = Direction.RIGHT
 		animated_sprite_2d.play("right")
+	elif event.is_action_pressed("ui_up"):
+		print(global_position)
 
 
 func _physics_process(delta: float) -> void:
