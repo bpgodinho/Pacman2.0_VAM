@@ -372,6 +372,7 @@ sources/0 = SubResource("TileSetAtlasSource_on0wc")
 [node name="Level1" type="Node2D"]
 position = Vector2(-20, 0)
 script = ExtResource("1_yuver")
+total_pellets = 288
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(20, 0)

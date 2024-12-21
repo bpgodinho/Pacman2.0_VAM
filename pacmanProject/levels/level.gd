@@ -14,6 +14,7 @@ var free_cells = []
 var current_powerup_tile: Vector2
 var spawning := false
 var eaten_pellets := 0
+@export var total_pellets := 0
 
 func _ready() -> void:
 	GameManager.running_mode_entered.connect(_on_running_mode_entered)
@@ -21,8 +22,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if eaten_pellets == 288:
-		print("win")
+	if tile_map_layer.get_used_cells_by_id(-1,Vector2i(8,0)) == []:
+		get_tree().change_scene_to_file("res://MainMenuButton.tscn")
 
 
 func _physics_process(delta: float) -> void:

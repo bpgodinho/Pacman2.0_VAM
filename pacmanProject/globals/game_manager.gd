@@ -22,18 +22,23 @@ func enter_running_mode() -> void:
 
 
 func eat_small_pellet() -> void:
-	score += 2
+	grant_points(2)
 
 
 func eat_large_pellet() -> void:
-	score += 10
+	grant_points(10)
 	enter_running_mode()
 
 
 func eat_ghost() -> void:
-	score += 100
+	grant_points(100)
+
 
 func eat_bonus(points: int) -> void:
+	grant_points(points)
+
+
+func grant_points(points: int) -> void:
 	score += points
 
 
