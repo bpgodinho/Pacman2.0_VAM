@@ -80,6 +80,9 @@ func die() -> void:
 	
 	death_sound.play()
 	GameManager.lives -= 1
+	if GameManager.score >= 1000:
+		GameManager.score -= 1000
+		GameManager.lives += 1
 	if GameManager.lives < 0:
 		# Check if this score is highscore
 		if GameManager.score > SaveSystem.data.highscore:

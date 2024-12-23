@@ -348,4 +348,8 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GateDetector"]
 shape = SubResource("CircleShape2D_62kmj")
 
+[node name="RunTimer" type="Timer" parent="."]
+
+[node name="RunEndTimer" type="Timer" parent="."]
+
 [connection signal="body_exited" from="GateDetector" to="." method="_on_gate_detector_body_exited"]

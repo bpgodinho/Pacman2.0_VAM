@@ -154,6 +154,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_c4rxx")
 text = "START"
+flat = true
 script = ExtResource("2_mou80")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="."]

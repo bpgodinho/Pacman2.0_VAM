@@ -40,6 +40,9 @@ func eat_bonus(points: int) -> void:
 
 func grant_points(points: int) -> void:
 	score += points
+	if score > 1000 && lives < 3:
+		score -= 1000
+		lives += 1
 
 
 func end_game() -> void:
