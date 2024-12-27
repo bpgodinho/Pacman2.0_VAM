@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if tile_map_layer.get_used_cells_by_id(-1,Vector2i(8,0)) == []:
-		get_tree().change_scene_to_file("res://MainMenuButton.tscn")
+		GameManager.end_game()
 
 
 func _physics_process(delta: float) -> void:

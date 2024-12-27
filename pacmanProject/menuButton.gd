@@ -3,6 +3,7 @@ extends Button
 @onready var player_sprite: AnimatedSprite2D = $playerSprite
 
 @export var newscene: String
+@export var level: int
 
 func _ready() -> void:
 	player_sprite.play("right")
